@@ -1,0 +1,6 @@
+d:\documents\visual studio 2015\Projects\LabNetMyTab\bin\Debug\LabNetMyTab.exe.config
+d:\documents\visual studio 2015\Projects\LabNetMyTab\bin\Debug\LabNetMyTab.exe
+d:\documents\visual studio 2015\Projects\LabNetMyTab\bin\Debug\LabNetMyTab.pdb
+d:\documents\visual studio 2015\Projects\LabNetMyTab\obj\Debug\LabNetMyTab.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\LabNetMyTab\obj\Debug\LabNetMyTab.exe
+d:\documents\visual studio 2015\Projects\LabNetMyTab\obj\Debug\LabNetMyTab.pdb
