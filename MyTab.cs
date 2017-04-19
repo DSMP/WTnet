@@ -10,16 +10,16 @@ namespace zad2MyTab
     {
         int size = 1;
         Int32[] tab = (Int32[])Array.CreateInstance(typeof(Int32),1);
-        int MainLastIndex = 0;
-        public void add(int value)
+        int mainLastIndex = 0;
+        public void Add(int value)
         {
-            tab.SetValue(value, MainLastIndex);
+            this[++mainLastIndex] = value;
         }
         public int this[int index]
         {
             get
             {
-                if (index > MainLastIndex && index < size - 1) // && index < size-1
+                if (index > mainLastIndex && index < size - 1) // && index < size-1
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -32,10 +32,10 @@ namespace zad2MyTab
                     if (index < size-1)
                     {
                         tab.SetValue(value, index);
-                        if (MainLastIndex < index)
+                        if (mainLastIndex < index)
                         {
-                            InitializeSpaceBetweenLastIndexAndUserIndex(MainLastIndex, index);
-                            MainLastIndex = index;
+                            InitializeSpaceBetweenLastIndexAndUserIndex(mainLastIndex, index);
+                            mainLastIndex = index;
                         }
                         return;
                     }
@@ -55,8 +55,6 @@ namespace zad2MyTab
                 mainLastIndex++;
             }
         }
-        
-        
 
         private void AddMoreSpace()
         {
