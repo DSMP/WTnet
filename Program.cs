@@ -10,7 +10,18 @@ namespace zad2MyTab
     {
         static void Main(string[] args)
         {
+            MyProgram myProgram = new MyProgram();
+        }
+
+    }
+    class MyProgram
+    {
+        public MyProgram()
+        {
             MyTab myTab = new MyTab();
+
+            myTab.SizeChanged += MyTab_SizeChanged; // to musi isc na zewnatrz
+            myTab.AddedNewValue += MyTab_AddedNewValue;
             myTab[3] = 10;
             myTab.Add(20);
             myTab.Add(21);
@@ -30,5 +41,16 @@ namespace zad2MyTab
             //Console.WriteLine(myTab[4]);
             Console.ReadKey();
         }
+
+        private void MyTab_AddedNewValue(object sender, EventArgs e)
+        {
+            Console.WriteLine("Dodano nową wartość");
+        }
+
+        void MyTab_SizeChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("powiekszono tablice. Aktualny rozmiar to: " + ((MyEventArgs)e).Size);
+        }
     }
+
 }

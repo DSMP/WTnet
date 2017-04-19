@@ -10,3 +10,9 @@ C:\Users\student.CARBON\Desktop\temp\obj\Debug\LabNetMyTab.pdb
 C:\Users\student.CARBON\Desktop\temp\bin\Debug\LabNetMyTab.exe
 C:\Users\student.CARBON\Desktop\temp\bin\Debug\LabNetMyTab.pdb
 C:\Users\student.CARBON\Desktop\temp\obj\Debug\LabNetMyTab.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\bin\Debug\LabNetMyTab.exe.config
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\obj\Debug\LabNetMyTab.exe
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\obj\Debug\LabNetMyTab.pdb
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\bin\Debug\LabNetMyTab.exe
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\bin\Debug\LabNetMyTab.pdb
+D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\obj\Debug\LabNetMyTab.csprojResolveAssemblyReference.cache

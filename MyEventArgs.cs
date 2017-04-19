@@ -10,15 +10,7 @@ namespace zad2MyTab
     {
         public int Size
         {
-            get
-            {
-                return Size;
-            }
-
-            set
-            {
-                Size = value;
-            }
+            get; internal set;
         }
     }
 }

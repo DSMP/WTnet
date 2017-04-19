@@ -12,7 +12,7 @@ namespace zad2MyTab
         Int32[] tab = (Int32[])Array.CreateInstance(typeof(Int32), 1);
         int mainLastIndex = 0;
         public event EventHandler SizeChanged;
-        public event EventHandler SetNewValue;
+        public event EventHandler AddedNewValue;
         public void Add(int value)
         {
             this[++mainLastIndex] = value;
@@ -34,7 +34,7 @@ namespace zad2MyTab
                     if (index < size - 1)
                     {
                         tab.SetValue(value, index);
-                        //zdarzenie
+                        OnAddNewValue(new MyEventArgs());
                         if (mainLastIndex < index)
                         {
                             InitializeSpaceBetweenLastIndexAndUserIndex(mainLastIndex, index);
@@ -61,26 +61,27 @@ namespace zad2MyTab
 
         private void AddMoreSpace()
         {
-            //OnAddMoreSpace(mainLastIndex, EventArgs.Empty);
-            SizeChanged += MyTab_SizeChanged; // to musi isc na zewnatrz
             size *= 2;
             Array.Resize<Int32>(ref tab, size);
-            SizeChanged(this, );
+            OnAddMoreSpace(new MyEventArgs());
         }
 
-        private void MyTab_SizeChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine("powiekszono tablice. Aktualny rozmiar to: " + index);
-        }
-
-        protected void OnAddMoreSpace(int index, MyEventArgs e)
+        protected virtual void OnAddMoreSpace(MyEventArgs e)
         {
             if (SizeChanged != null)
             {
-                e.Size = mainLastIndex;
+                e.Size = size;
                 SizeChanged(this, e);
+            }                
+        }
+        protected virtual void OnAddNewValue(MyEventArgs e)
+        {
+            if (AddedNewValue != null)
+            {
+                e.Size = size;
+                AddedNewValue(this, e);
             }
-                
+            
         }
     }
 }
