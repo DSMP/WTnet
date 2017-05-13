@@ -28,6 +28,7 @@ namespace zad2MyTab
             {
                 return false;
             }
+            this.Add(value);
             Monitor.Exit(MySelfRef);
             return true;
         }
