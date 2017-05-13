@@ -18,7 +18,7 @@ namespace zad2MyTab
     {
         public MyProgram()
         {
-            MyTab myTab = new MyTab();
+            SyncTab myTab = new SyncTab();
 
             myTab.SizeChanged += MyTab_SizeChanged; // to musi isc na zewnatrz
             myTab.AddedNewValue += MyTab_AddedNewValue;
