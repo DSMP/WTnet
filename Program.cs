@@ -20,6 +20,8 @@ namespace zad2MyTab
             SecondThread.Start();
             SecondThread.Join();
             FirstThread.Join();
+            newTab.FileName = "Vector.txt";
+            newTab.WriteToFile();
             Console.ReadKey();
             Thread FirstThread1 = new Thread(new ThreadStart(myProgram.TestNieBlokujacych));
             Thread SecondThread1 = new Thread(new ThreadStart(myProgram2.TestNieBlokujacych));
@@ -27,6 +29,8 @@ namespace zad2MyTab
             SecondThread1.Start();
             SecondThread1.Join();
             FirstThread1.Join();
+            newTab.FileName = "Vector2.txt";
+            newTab.WriteToFile();
             Console.ReadKey();
         }
 

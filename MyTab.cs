@@ -11,6 +11,33 @@ namespace zad2MyTab
         int size = 1;
         Int32[] tab = (Int32[])Array.CreateInstance(typeof(Int32), 1);
         int mainLastIndex = 0;
+
+        public int Size
+        {
+            get
+            {
+                return size;
+            }
+
+            set
+            {
+                size = value;
+            }
+        }
+
+        public int MainLastIndex
+        {
+            get
+            {
+                return mainLastIndex;
+            }
+
+            set
+            {
+                mainLastIndex = value;
+            }
+        }
+
         public event EventHandler SizeChanged;
         public event EventHandler AddedNewValue;
         public void Add(int value)
