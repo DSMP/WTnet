@@ -22,9 +22,9 @@ namespace zad2MyTab
             Monitor.Exit(MySelfRef);
         }
 
-        public bool addNieBlokujaca(int value)
+        public bool addNieBlokujaca(int value, int timeMs)
         {
-            if (!Monitor.TryEnter(MySelfRef))
+            if (!Monitor.TryEnter(MySelfRef, timeMs))
             {
                 return false;
             }

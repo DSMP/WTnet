@@ -36,6 +36,7 @@ namespace zad2MyTab
         SyncTab MyTab;
         static int sId = 0;
         int Id = 0;
+        int Time = 0;
         public MyProgram(SyncTab myTab)
         {
             MyTab = myTab;
@@ -47,18 +48,20 @@ namespace zad2MyTab
             MyTab.SizeChanged += MyTab_SizeChanged; // to musi isc na zewnatrz
             MyTab.AddedNewValue += MyTab_AddedNewValue;
             MyTab[3] = 10;
-            MyTab.addNieBlokujaca(20);
-            MyTab.addNieBlokujaca(21);
-            MyTab.addNieBlokujaca(22);
-            MyTab.addNieBlokujaca(23);
-            MyTab.addNieBlokujaca(24);
-            MyTab.addNieBlokujaca(25);
+            checkBlocking(MyTab.addNieBlokujaca(20, Time));
+            checkBlocking(MyTab.addNieBlokujaca(21, Time));
+            checkBlocking(MyTab.addNieBlokujaca(22, Time));
+            checkBlocking(MyTab.addNieBlokujaca(23, Time));
+            checkBlocking(MyTab.addNieBlokujaca(24, Time));
+            checkBlocking(MyTab.addNieBlokujaca(25, Time));
             Console.WriteLine("{0}: {1}", Id, MyTab[10]);
             Console.WriteLine("{0}: {1}", Id, MyTab[11]);
             Console.WriteLine("{0}: {1}", Id, MyTab[12]);
             Console.WriteLine("{0}: {1}", Id, MyTab[13]);
             Console.WriteLine("{0}: {1}", Id, MyTab[14]);
             Console.WriteLine("{0}: {1}", Id, MyTab[15]);
+            MyTab.SizeChanged -= MyTab_SizeChanged;
+            MyTab.AddedNewValue -= MyTab_AddedNewValue;
         }
 
         public void MyProgramFun()
@@ -85,6 +88,19 @@ namespace zad2MyTab
             //Console.WriteLine(myTab[2]);
             //Console.WriteLine(myTab[3]);
             //Console.WriteLine(myTab[4]);
+        }
+
+        private void checkBlocking(bool value)
+        {
+            if (value)
+            {
+                Console.WriteLine(Id + " udało sie");
+            }
+            else
+            {
+                Console.WriteLine(Id + " nie udało sie");
+            }
+            
         }
 
         private void MyTab_AddedNewValue(object sender, EventArgs e)
