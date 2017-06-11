@@ -16,3 +16,9 @@ D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\obj\Debug\LabNetMyTab.pd
 D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\bin\Debug\LabNetMyTab.exe
 D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\bin\Debug\LabNetMyTab.pdb
 D:\Documents\Visual Studio 2015\GitProjects\LabNetMyTab\obj\Debug\LabNetMyTab.csprojResolveAssemblyReference.cache
+C:\Users\oz-43\Desktop\net\bin\Debug\LabNetMyTab.exe.config
+C:\Users\oz-43\Desktop\net\obj\Debug\LabNetMyTab.exe
+C:\Users\oz-43\Desktop\net\obj\Debug\LabNetMyTab.pdb
+C:\Users\oz-43\Desktop\net\bin\Debug\LabNetMyTab.exe
+C:\Users\oz-43\Desktop\net\bin\Debug\LabNetMyTab.pdb
+C:\Users\oz-43\Desktop\net\obj\Debug\LabNetMyTab.csprojResolveAssemblyReference.cache

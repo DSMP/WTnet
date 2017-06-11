@@ -47,8 +47,17 @@ namespace zad2MyTab
         public void addBlokujaca(int value)
         {
             Monitor.Enter(MySelfRef);
-            this.Add(value);
-            Monitor.Exit(MySelfRef);
+            try
+            {
+                this.Add(value);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw;
+            }finally
+            {
+                Monitor.Exit(MySelfRef);
+            }
         }
 
         public bool addNieBlokujaca(int value, int timeMs)
@@ -57,8 +66,18 @@ namespace zad2MyTab
             {
                 return false;
             }
-            this.Add(value);
-            Monitor.Exit(MySelfRef);
+            try
+            {
+                this.Add(value);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw;
+            }
+            finally
+            {
+                Monitor.Exit(MySelfRef);
+            }
             return true;
         }
     }
